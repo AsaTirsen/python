@@ -1,0 +1,30 @@
+/**
+ * Style
+ */
+body {
+    margin: 8px auto;
+    color: #333;
+    background-color: #e6fcfd;
+    max-width: 600px;
+    overflow-y: scroll;
+}
+
+h1 {
+    border-bottom: 1px solid #666;
+    font-size: 2em;
+    font-family: Monaco, sans-serif;
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+    font-family: Monaco, sans-serif;
+}
+
+pre {
+    white-space: pre-wrap;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-family: Arial, sans-serif;
+}
