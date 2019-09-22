@@ -15,13 +15,10 @@ https://github.com/dbwebb-se/lab
 
 from dbwebb import Dbwebb
 
-
 # pylint: disable=invalid-name
 
 dbwebb = Dbwebb()
 dbwebb.ready_to_begin()
-
-
 
 # ==========================================================================
 # Lab 2 - python
@@ -31,13 +28,11 @@ dbwebb.ready_to_begin()
 #
 
 
-
 # --------------------------------------------------------------------------
 # Section 1. Boolean operators and if-statements
 #
 # The basics of boolean operators and if-statements.
 #
-
 
 
 # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -57,7 +52,6 @@ dice2 = 1
 dice3 = 3
 
 boolean1 = dice1 > dice2
-
 
 ANSWER = boolean1
 
@@ -80,8 +74,6 @@ if sum_dice > 11:
     result = "big"
 else:
     result = "small"
-
-
 
 ANSWER = result
 # I will now test your answer - change false to true to get a hint.
@@ -109,7 +101,6 @@ elif sum_more_dices >= 11 and sum_more_dices < 21:
     result = "intermediate"
 else:
     result = "big"
-
 
 ANSWER = result
 
@@ -145,7 +136,6 @@ dbwebb.assert_equal("1.4", ANSWER, False)
 #
 
 
-
 # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 # Exercise 2.1 (1 points)
 #
@@ -162,7 +152,6 @@ r_var = ""
 for i in range(0, 11):
     r_var = r_var + str(i) + ','
 ANSWER = r_var
-
 
 # I will now test your answer - change false to true to get a hint.
 dbwebb.assert_equal("2.1", ANSWER, False)
@@ -217,7 +206,6 @@ dbwebb.assert_equal("2.3", ANSWER, False)
 #
 # The basics of while-loops.
 #
-
 
 
 # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -277,7 +265,7 @@ dbwebb.assert_equal("3.2", ANSWER, True)
 num_fact = 9
 count_fact = 9
 while count_fact > 1:
-    num_fact = num_fact * (count_fact -1)
+    num_fact = num_fact * (count_fact - 1)
     count_fact -= 1
 
 ANSWER = num_fact
@@ -290,7 +278,6 @@ dbwebb.assert_equal("3.3", ANSWER, True)
 #
 # These questions are worth 3 points each. Solve them for extra points.
 #
-
 
 
 # """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -335,219 +322,21 @@ dbwebb.assert_equal("4.1", ANSWER, False)
 # Write your code below and put the answer into the variable ANSWER.
 #
 
-# range_one = range(0, 10)
-# range_two = range(0, 10)
-# range_three = range(1, 10)
-# for i in range_one:
-#     print("i", i)
-#     for j in range_two:
-#         print("j", j)
-#         for k in range_three:
-#             print("k", type(k))
-#             try:
-#                 if range_two[j] + range_one[i] == range_three[k]:
-#                     counter += 1
-#                     print("addition")
-#                 elif range_two[j] - range_one[i] == range_three[k]:
-#                     counter += 1
-#                     print("subtraction")
-#                 elif range_one[i] - range_two[j] == range_three[k]:
-#                     counter += 1
-#                     print("subtraction")
-#                 elif range_two[j] * range_one[i] == range_three[k]:
-#                     counter += 1
-#                     print("mp")
-#                 elif range_two[j] / range_one[i] == range_three[k]:
-#                     counter += 1
-#                     print("div")
-#                 elif range_one[i] / range_two[j] == range_three[k]:
-#                     counter += 1
-#                     print("div")
-#             except ZeroDivisionError:
-#                 print("divby0")
-
-
-
-
-
-# num_one= 0
-# num_two = 0
-# num_three = 1
-# counter= 0
-# list_of_lists = 0
-# num_list = [0, 0, 1]
-# for i in num_list:
-#     if i < 9:
-#         i = i + 1
-#         print(i)
-#         num_list += [i]
-#         list_of_lists = num_list
-#         print(num_list)
-# for i in range(0, len(list_of_lists), 3):
-#     print(list_of_lists[i:i + 3])
-# for i in list_of_lists:
-#     try:
-#         if list_of_lists[0] + list_of_lists[1] == list_of_lists[2]:
-#             print("match")
-#             counter += 1
-#         elif num_list[0] - num_list[1] == num_list[2]:
-#             print("match")
-#             counter += 1
-#         elif num_list[0] * num_list[1] == num_list[2]:
-#             print("match")
-#             counter += 1
-#         elif num_list[0] / num_list[1] == num_list[2]:
-#             print("match")
-#             counter += 1
-#     except ZeroDivisionError:
-#          print("divby0")
-
-
-
-# while num_one + num_two + num_three < 28:
-#     while num_one < 9:
-
-#         num_one += 1
-#         print(num_one, "var1")
-#     while num_two < 9:
-#         try:
-#             if num_one + num_two == num_three:
-#                 print("match")
-#                 counter += 1
-#             elif num_one - num_two == num_three:
-#                 print("match")
-#                 counter += 1
-#             elif num_one * num_two == num_three:
-#                 print("match")
-#                 counter += 1
-#             elif num_one / num_two == num_three:
-#                 print("match")
-#                 counter += 1
-#         except ZeroDivisionError:
-#             print("divby0")
-#         num_two += 1
-#         print(num_two, "var2")
-#     while num_three < 9:
-#         try:
-#             if num_one + num_two == num_three:
-#                 print("match")
-#                 counter += 1
-#             elif num_one - num_two == num_three:
-#                 print("match")
-#                 counter += 1
-#             elif num_one * num_two == num_three:
-#                 print("match")
-#                 counter += 1
-#             elif num_one / num_two == num_three:
-#                 print("match")
-#                 counter += 1
-#         except ZeroDivisionError:
-#             print("divby0")
-#         num_three += 1
-#         print(num_three, "var3")
-# print(counter)
-#
-
-
-# list1 = [123]
-# list2 = [456]
-# list3 = [789]
-# for i in list1:
-#     print(list1)
-#     for j in list2:
-#         print(list2)
-#         for k in list3:
-#             print(list3)
-#
-
-
-# list = [0, 0, 1]
-# counter = 0
-# while list[0] < 10:
-#     list[0] += 1
-#     if list[0] + list[1] == list[2]:
-#         counter += 1
-#     while list[1] < 10:
-#         list[1] += 1
-#         if list[0] + list[1] == list[2]:
-#             counter += 1
-#         while list[2] < 10:
-#             if list[0] + list[1] == list[2
-
-    # elif list[0] - list[1] == list[2]:
-    #     counter += 1
-    # elif list[0] * list[1] == list[2]:
-    #     counter += 1
-    # elif list[0] / (list[1] + 1) == list[2]:
-    #     counter += 1
-
-
-
-# list1 = [0]
-# list2 = [0]
-# list3 = [1]
-#
-# for i in list1:
-#     list1 = [i + 1]
-#     if list1[i] + list2[j]:
-#
-#     for j in list2:
-#         list2 = j + 1
-#         for k in list3:
-#             list3 = k + 1
-
-
-
-# ental = 0
-# tiotal = 0
-# hundratal = 1
-# counter_total = 0
-#
-#
-# while hundratal < 10:
-#     ental = ental + 1
-#     if ental + tiotal == hundratal:
-#         counter_total += 1
-#         #ental += 1
-#         hundratal += 1
-#         continue
-#     elif ental - tiotal == hundratal:
-#         counter_total += 1
-#         ental += 1
-#         hundratal += 1
-#         continue
-#     elif ental * tiotal == hundratal:
-#         counter_total += 1
-#         ental += 1
-#         hundratal += 1
-#         continue
-#     elif (ental+0.1) / (tiotal+0.1) == hundratal:
-#         counter_total += 1
-#         ental += 1
-#         hundratal += 1
-#         continue
-#     else:
-#         ental += 1
-#         hundratal += 1
-#
-# list_of_numbers = [0, 0, 1]
-# counter_total = 0
-# for i in range(0, 9):
-#     list_of_numbers[0] = list_of_numbers[0] + 1
-#     list_of_numbers[2] = list_of_numbers[2] + 1
-#     for i in range(0, 9):
-#         list_of_numbers[1] = list_of_numbers[1] + 1
-#         if list_of_numbers[0] + list_of_numbers[1] is list_of_numbers[2]:
-#             counter_total = + 1
-#             continue
-#     if list_of_numbers[0] + list_of_numbers[1] is list_of_numbers[2]:
-#             counter_total =+ 1
-
+for i in range(0, 9):
+    for j in range(0, 9):
+        for k in range(1, 9):
+            if i + j == k:
+                counter += 1
+            elif i - j == k:
+                counter += 1
+            elif i * j == k:
+                counter += 1
+            elif j != 0 and i / j == k:
+                counter += 1
 
 ANSWER = counter
 
 # I will now test your answer - change false to true to get a hint.
 dbwebb.assert_equal("4.2", ANSWER, True)
-
 
 dbwebb.exit_with_summary()
